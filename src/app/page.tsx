@@ -12,7 +12,7 @@ export default function Home() {
     Promise.all([
       fetch('/api/services').then(res => res.json()),
       fetch('/api/profile').then(res => res.json())
-    ]).then(([servicesData, profileData]) => {
+    ]).then(([servicesData, profileData]: [any, any]) => {
       setServices(Array.isArray(servicesData) ? servicesData : []);
       if (profileData && profileData.companyName) {
         setProfile(profileData);

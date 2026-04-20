@@ -11,7 +11,7 @@ export default function AdminServices() {
   useEffect(() => {
     fetch('/api/services')
       .then(res => res.json())
-      .then(data => {
+      .then((data: any) => {
         setServices(Array.isArray(data) ? data : []);
         setLoading(false);
       });

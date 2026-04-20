@@ -10,7 +10,7 @@ export default function ProfilePage() {
   useEffect(() => {
     fetch('/api/profile')
       .then(res => res.json())
-      .then(data => {
+      .then((data: any) => {
         if (data) {
           setForm({ companyName: data.companyName || '', address: data.address || '', email: data.email || '' });
         }
