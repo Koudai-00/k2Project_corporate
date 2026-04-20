@@ -35,7 +35,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
         appStoreUrl: body.appStoreUrl,
         googlePlayUrl: body.googlePlayUrl,
         webUrl: body.webUrl,
-        updatedAt: new Date(),
+        updatedAt: new Date().toISOString(),
       })
       .where(eq(services.id, Number(id)));
       
