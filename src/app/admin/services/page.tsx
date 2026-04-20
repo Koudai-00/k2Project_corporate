@@ -44,6 +44,7 @@ export default function AdminServices() {
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>{s.description.substring(0, 50)}...</p>
               </div>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <button className="btn btn-outline" style={{ padding: '0.4rem 1rem' }} onClick={() => router.push(`/admin/services/${s.id}/edit`)}>編集</button>
                 <button className="btn btn-outline" style={{ padding: '0.4rem 1rem' }} onClick={() => handleDelete(s.id)}>削除</button>
               </div>
             </div>
