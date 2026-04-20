@@ -23,7 +23,7 @@ export default function LoginPage() {
         router.push('/admin');
         router.refresh();
       } else {
-        const data = await res.json();
+        const data = await res.json() as { message?: string };
         setError(data.message || 'ログインに失敗しました');
       }
     } catch (err) {
