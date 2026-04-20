@@ -3,6 +3,8 @@
 import { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 
+export const runtime = 'edge';
+
 export default function EditService({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter();
   const { id } = use(params);
