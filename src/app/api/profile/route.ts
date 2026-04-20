@@ -17,7 +17,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body = await request.json() as any;
     const db = getDb();
     
     const existing = await db.select().from(profile).all();
