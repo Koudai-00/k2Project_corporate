@@ -18,5 +18,8 @@ export const profile = sqliteTable('profile', {
   companyName: text('company_name').notNull(),
   address: text('address').notNull(),
   email: text('email'),
+  representativeName: text('representative_name'),
+  businessDescription: text('business_description'),
+  establishedDate: text('established_date'),
   updatedAt: text('updated_at').notNull().default('CURRENT_TIMESTAMP'),
 });

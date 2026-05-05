@@ -98,9 +98,30 @@ export default function Home() {
           <h2 className="section-title">About Us</h2>
           <div className="glass" style={{ padding: '3rem', maxWidth: '800px', margin: '0 auto' }}>
             <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>事業者情報</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '1rem', alignItems: 'start' }}>
               <strong style={{ color: 'var(--text-muted)' }}>事業者名</strong>
               <span>{profile.companyName}</span>
+              
+              {profile.representativeName && (
+                <>
+                  <strong style={{ color: 'var(--text-muted)' }}>代表者名</strong>
+                  <span>{profile.representativeName}</span>
+                </>
+              )}
+
+              {profile.businessDescription && (
+                <>
+                  <strong style={{ color: 'var(--text-muted)' }}>事業内容</strong>
+                  <span style={{ whiteSpace: 'pre-wrap' }}>{profile.businessDescription}</span>
+                </>
+              )}
+
+              {profile.establishedDate && (
+                <>
+                  <strong style={{ color: 'var(--text-muted)' }}>設立</strong>
+                  <span>{profile.establishedDate}</span>
+                </>
+              )}
               
               <strong style={{ color: 'var(--text-muted)' }}>所在地</strong>
               <span>{profile.address || '設定されていません'}</span>

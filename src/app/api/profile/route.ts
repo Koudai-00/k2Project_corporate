@@ -26,6 +26,9 @@ export async function POST(request: Request) {
         companyName: body.companyName,
         address: body.address,
         email: body.email,
+        representativeName: body.representativeName,
+        businessDescription: body.businessDescription,
+        establishedDate: body.establishedDate,
         updatedAt: 'CURRENT_TIMESTAMP',
       }).where(eq(profile.id, existing[0].id));
     } else {
@@ -33,6 +36,9 @@ export async function POST(request: Request) {
         companyName: body.companyName,
         address: body.address,
         email: body.email,
+        representativeName: body.representativeName,
+        businessDescription: body.businessDescription,
+        establishedDate: body.establishedDate,
       });
     }
     
